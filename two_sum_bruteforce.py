@@ -36,4 +36,4 @@ for i in range(len(nums)):
             demo['first_number'] = nums[i]
             demo['second_number'] = nums[j]
             demo['indices'] = [i, j]
-print(f'First number: {demo['first_number']}\nSecond number: {demo['second_number']}\nIndices: {demo['indices']}')
+print(f'First number: {demo['first_number']}\nSecond number: {demo['second_number']}\nIndices: {demo['indices']}\nTarget: {target}')
