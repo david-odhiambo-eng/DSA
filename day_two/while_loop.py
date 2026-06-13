@@ -1,8 +1,12 @@
 
+
 while True:
-    response = input('How many wives do you have?: ')
-    if response == 'I have only one wife':
+    response = input('Enter your name: ')
+    if response == 'David Odhiambo':
         break
     else:
-        print('You got the answer wrong')
-print('You got the answer right')
+        print('You got it wrong, try again')
+
+
+print('You got the name Correct')
+
