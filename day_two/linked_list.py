@@ -12,16 +12,21 @@
 class Node:
     def __init__(self, data):
         self.data = data
-        self.next = None
-        #Data is the value that is stored in the a node
-        #By default, there is no next node, so we initialize it to None
+        self.link = None
 
-#creating node objects
-node1 = Node(5)
-node2 = Node(10)
-node3 = Node(-1)
-node4 = Node(15)
+class LinkedList:
+    def __init__(self):
+        self.head = None
 
-node1.next = node2
-node2.next = node3
-node3.next = node4
+    def traverse(self):
+        if self.head == None:
+            print('Linked List is empty')
+        else:
+            n = self.head
+            while n != None:
+                print(n.data, end='--->')
+                n = n.link
+node1 = Node(10)
+node2 = Node(33)
+link = LinkedList()
+link.traverse()
