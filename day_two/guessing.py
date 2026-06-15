@@ -19,3 +19,15 @@ while True:
 
 print(f'You have guessed {count} times')
 
+#the foundation is that:
+#while True initiates a continous loop
+#the loop only stops when a break key word is invoked
+#we can come up with conditions(true or false) that lead to break
+#breaking takes you out of the loop
+#from there we build up
+
+# while True:
+#     #check a condition(eg a user input)
+#     #if condition is not met, the loop keeps on running
+#     break
+
