@@ -38,22 +38,23 @@ class LinkedList:
 
     def add_between(self, data, value):
         n = self.head
-        while n.data != value:
-            n = n.link
-            if n.data == value:
+        while n != None:
+            if  value == n.data:
                 break
-        if n.data == None:
+            else:
+                n = n.link
+        if n == None:
             print('Not found')
         else:
             node = Node(data)
-            node.link = n
-            n = node
+            node.link = n.link
+            n.link = node
 
 
 node1 = LinkedList()
 node1.add_start(10)
 node1.add_end(100)
 node1.add_start(30)
-node1.add_between(219,2)
+node1.add_between(219,30)
 node1.traverse()
             
