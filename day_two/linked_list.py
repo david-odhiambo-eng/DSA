@@ -1,60 +1,64 @@
 class Node:
     def __init__(self, data):
         self.data = data
-        self.link = None
+        self.next = None
 
 class LinkedList:
     def __init__(self):
         self.head = None
 
     def traverse(self):
-        if self.head == None:
-            print('List is empty')
+        head = self.head
+        if head == None:
+            print('Linked List is empty')
         else:
-            n = self.head
-            while n != None:
-                print(f'{n.data}-->',end='')
-                n = n.link
+            while True:
+                print(f'{head.data}--->', end='')
+                head = head.next
+                if head == None:
+                    break
+            return head
 
     def add_start(self, data):
         node = Node(data)
-        if self.head == None:
-            self.head = node
-            node.link = None
-        else:
-            node.link = self.head
-            self.head = node
+        node.next = self.head
+        self.head = node
 
     def add_end(self, data):
+        head = self.head
         if self.head == None:
-            self.add_start(data)
-        else:
-            n = self.head
-            while n.link != None:
-                n = n.link
             node = Node(data)
-            n.link = node
-            node.link = None
+            self.head = node
 
-    def add_between(self, data, value):
-        n = self.head
-        while n != None:
-            if  value == n.data:
-                break
-            else:
-                n = n.link
-        if n == None:
-            print('Not found')
         else:
-            node = Node(data)
-            node.link = n.link
-            n.link = node
+            while True:
+                head = head.next
+                if head == None:
+                    node = Node(data)
+                    head = node
+                    break
+                
 
-
-node1 = LinkedList()
-node1.add_start(10)
-node1.add_end(100)
-node1.add_start(30)
-node1.add_between(219,30)
-node1.traverse()
             
+        
+        
+        
+            
+        
+
+    
+
+node1 = Node(10)
+node2 = Node(44)
+node3 = Node('Jesse')
+node4 = Node(103)
+node5 = Node(1024)
+link = LinkedList()
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+link.head = node1
+
+link.add_end(13)
+link.traverse()

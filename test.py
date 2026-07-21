@@ -1,12 +1,24 @@
-num = 842000
-squares = []
-sum = 0
+def calculate_area(l: int, w: int):
+    area = l * w
+    print(f'Area is {area}cm^2 ')
+    return area
 
-for i in range(num):
-    if i % 2 == 1:
-        squares.append(i)
-for j in squares:
-    s = j * j
-    sum += s
+while True:
+    l = input('Enter length: ')
+    w = input('Enter width: ')  
 
-print(sum)
+    try:
+        length = int(l)
+        width = int(w)
+        calculate_area(length, width)
+        break
+    except ValueError:
+        print('Try again, integers only')
+
+
+    
+
+
+    
+
+
