@@ -1,26 +1,21 @@
-values = [10,44,9.5,3,100,19,58]
-sorted_values = sorted(values)
-print(sorted_values)
-
+numbers = [1,2,3,4,5,6,7,8,9,10,11]#1000_0000
+target = 110
+iterations = 0
 low = 0
-high = len(sorted_values)-1
-target = 100
-iteration = 0
-
-while True:
-    
-    
+high = len(numbers)-1
+while low <= high:
     mid = (low + high) // 2
-    print(f'Iteration {iteration}, Low: {low}, High: {high}, mid is at index {mid}')
-    iteration += 1
-    if sorted_values[mid] == target:
+    if numbers[mid] == target:
+        iterations += 1
         print(f'Target {target} found at index {mid}')
         break
-    elif sorted_values[mid] < target:
-        print(f'Value: {sorted_values[mid]} is smaller than {target}')
+    elif numbers[mid] < target:
         low = mid + 1
-    elif low > high:
-        break
+        iterations += 1
     else:
         high = mid - 1
-        print(f'Value {sorted_values[mid]} is larger than target')
+        iterations += 1
+else:
+    print('Target not found')
+
+print(f'You searched {iterations} times')

@@ -1,24 +1,23 @@
-def calculate_area(l: int, w: int):
-    area = l * w
-    print(f'Area is {area}cm^2 ')
-    return area
+#guessing game
+correct_answer = 'Python'
+guesses = 0
+tries = 5
 
 while True:
-    l = input('Enter length: ')
-    w = input('Enter width: ')  
-
     try:
-        length = int(l)
-        width = int(w)
-        calculate_area(length, width)
-        break
-    except ValueError:
-        print('Try again, integers only')
-
-
-    
-
-
-    
-
-
+        attempt = input('Enter favorite language: ')
+        if attempt == correct_answer:
+            guesses += 1
+            tries -= 1
+            print('Correct...Hooray')
+            break
+        elif tries == 0:
+            print('No guesses remaining')
+            break
+        else:
+            guesses += 1
+            tries -= 1
+            print(f'{tries} remaining')
+    except:
+        print('Letters only')
+print(f'You tried {guesses} times')
