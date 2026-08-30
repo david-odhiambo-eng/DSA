@@ -7,15 +7,15 @@
 
 #1. for loop
 numbers = [10, 3, 2, 17, 30.4, 98, 8]
-# squared_nums = []
+squared_nums = []
 sum = 0
-# for num in numbers:
-#     if num % 2 == 0:
-#         squared_nums.append(num * num)
-# print(squared_nums)
-# for num in squared_nums:
-#     sum += num
-# print(sum)
+for num in numbers:
+    if num % 2 == 0:
+        squared_nums.append(num * num)
+print(squared_nums)
+for num in squared_nums:
+    sum += num
+print(sum)
 
 #answer is: 9772
 
@@ -25,3 +25,5 @@ for num in squared_nums:
     sum += num
 print(squared_nums)
 print(sum)
+
+#answer is: 9772
